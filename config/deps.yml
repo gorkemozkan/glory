@@ -1,0 +1,59 @@
+# npm version tracking. The package list is read from config/package.snapshot.json;
+# the tiers below decide which bumps get reported.
+
+tier1:   # report every release, including patches
+  - react-native
+  - react
+  - react-dom
+  - expo
+  - expo-router
+  - react-native-reanimated
+  - react-native-screens
+  - react-native-gesture-handler
+  - react-native-worklets
+  - react-native-worklets-core
+  - react-native-safe-area-context
+  - react-native-vision-camera
+  - react-native-mmkv
+  - react-native-svg
+  - "@shopify/flash-list"
+  - typescript
+
+tier2:   # report minor and major only
+  - "@react-native-firebase/app"
+  - "@react-native-firebase/analytics"
+  - "@react-native-firebase/auth"
+  - "@react-native-firebase/crashlytics"
+  - "@react-native-firebase/database"
+  - "@react-native-firebase/installations"
+  - "@react-native-firebase/perf"
+  - "@react-native-firebase/remote-config"
+  - "@react-native-firebase/storage"
+  - "@sentry/react-native"
+  - react-native-adapty
+  - react-native-onesignal
+  - react-native-appsflyer
+  - react-native-fbsdk-next
+  - react-native-webview
+  - "@gorhom/bottom-sheet"
+  - "@microsoft/react-native-clarity"
+  - "@react-native-google-signin/google-signin"
+  - "@react-native-community/netinfo"
+  - "@reduxjs/toolkit"
+  - react-redux
+  - react-hook-form
+  - zod
+  - i18next
+  - react-i18next
+  - lottie-react-native
+  - expo-notifications
+  - expo-image
+  - expo-video
+  - expo-dev-client
+  - expo-build-properties
+
+# Everything else in dependencies, and all devDependencies: tier 3, major only.
+defaultTier: 3
+
+# Packages that are not on the public registry, or should not be watched at all.
+denylist: []

@@ -1,0 +1,182 @@
+# Source definitions. `adapter` is the fetch mechanism, `section` is the rendered
+# bucket. They are not 1:1; every entry declares both independently.
+#
+# NOTE: facebook/react-native and mrousavy/nitro currently 301-redirect to
+# react/react-native and margelo/nitro (org renames). fetch follows redirects, so the
+# original URLs are kept deliberately - if an org moves again it surfaces in one place.
+
+defaults:
+  timeoutMs: 15000
+  retries: 3
+  required: true
+
+sources:
+  # ─────────────────────────── releases ───────────────────────────
+  - id: rn-releases
+    adapter: rss
+    section: releases
+    url: https://github.com/facebook/react-native/releases.atom
+    title: "React Native"
+
+  - id: reanimated-releases
+    adapter: rss
+    section: releases
+    url: https://github.com/software-mansion/react-native-reanimated/releases.atom
+    title: "Reanimated"
+
+  - id: screens-releases
+    adapter: rss
+    section: releases
+    url: https://github.com/software-mansion/react-native-screens/releases.atom
+    title: "react-native-screens"
+
+  - id: react-navigation-releases
+    adapter: rss
+    section: releases
+    url: https://github.com/react-navigation/react-navigation/releases.atom
+    title: "React Navigation"
+
+  - id: hermes-releases
+    adapter: rss
+    section: releases
+    url: https://github.com/facebook/hermes/releases.atom
+    title: "Hermes"
+
+  - id: nitro-releases
+    adapter: rss
+    section: releases
+    url: https://github.com/mrousavy/nitro/releases.atom
+    title: "Nitro"
+
+  - id: typescript-releases
+    adapter: rss
+    section: releases
+    url: https://github.com/microsoft/TypeScript/releases.atom
+    title: "TypeScript"
+
+  - id: npm-deps
+    adapter: npm
+    section: releases
+    # Package list comes from config/deps.yml + config/package.snapshot.json.
+    title: "npm dependencies"
+
+  - id: expo-changelog
+    adapter: pagediff
+    section: releases
+    url: https://expo.dev/changelog
+    selector: "article"
+    title: "Expo changelog"
+
+  - id: reactwg-releases
+    adapter: discussions
+    section: releases
+    repo: reactwg/react-native-releases
+    title: "React Native Releases WG"
+    required: false
+    # Near-silent since 2025; exempt from the 45-day silence alarm.
+    silenceExempt: true
+
+  # ─────────────────────────── platform ───────────────────────────
+  - id: apple-dev-news
+    adapter: rss
+    section: platform
+    url: https://developer.apple.com/news/rss/news.rss
+    title: "Apple Developer News"
+
+  - id: android-dev-blog
+    adapter: rss
+    section: platform
+    url: https://android-developers.googleblog.com/feeds/posts/default
+    title: "Android Developers Blog"
+
+  - id: appstore-review-guidelines
+    adapter: pagediff
+    section: platform
+    url: https://developer.apple.com/app-store/review/guidelines/
+    selector: "main"
+    title: "App Store Review Guidelines"
+
+  - id: googleplay-policy-deadlines
+    adapter: pagediff
+    section: platform
+    url: https://support.google.com/googleplay/android-developer/answer/9934569
+    selector: ".hcfe-content"
+    title: "Google Play policy timeline"
+
+  # ─────────────────────────── reading ────────────────────────────
+  - id: hn-frontpage
+    adapter: rss
+    section: reading
+    url: https://hnrss.org/frontpage?points=150
+    title: "Hacker News"
+
+  - id: reddit-reactnative
+    adapter: rss
+    section: reading
+    url: https://www.reddit.com/r/reactnative/top/.rss?t=day
+    required: false          # 403s frequently from Actions runner IPs
+    userAgent: "digest-bot/1.0 (personal daily digest)"
+    title: "r/reactnative"
+
+  - id: medium-react-native
+    adapter: rss
+    section: reading
+    url: https://medium.com/feed/tag/react-native
+    required: false
+    title: "Medium · react-native"
+
+  - id: rn-blog
+    adapter: rss
+    section: reading
+    url: https://reactnative.dev/blog/rss.xml
+    title: "React Native Blog"
+
+  - id: react-blog
+    adapter: rss
+    section: reading
+    url: https://react.dev/rss.xml
+    title: "React Blog"
+
+  - id: ts-devblog
+    adapter: rss
+    section: reading
+    url: https://devblogs.microsoft.com/typescript/feed/
+    title: "TypeScript DevBlog"
+
+  # ──────────────────────────── video ─────────────────────────────
+  - { id: yt-codeaesthetic,     adapter: youtube, section: video, handle: "@CodeAesthetic",      channelId: UCaSCt8s_4nfkRglWCvNSDrg }
+  - { id: yt-hnasr,             adapter: youtube, section: video, handle: "@hnasr",              channelId: UC_ML5xP23TOWKUcc-oAE_Eg }
+  - { id: yt-bytebytego,        adapter: youtube, section: video, handle: "@ByteByteGo",         channelId: UCZgt6AzoyjslHTC9dz0UoTw }
+  - { id: yt-galaxies,          adapter: youtube, section: video, handle: "@galaxies_dev",       channelId: UCZZPgUIorPao48a1tBYSDgg }
+  - { id: yt-expo,              adapter: youtube, section: video, handle: "@ExpoDevelopers",     channelId: UCx_YiR733cfqVPRsQ1n8Fag }
+  - { id: yt-callstack,         adapter: youtube, section: video, handle: "@CallstackEngineers", channelId: UCbvLih553T7f5OAGTfbsJkQ }
+  - { id: yt-software-mansion,  adapter: youtube, section: video, handle: "@SoftwareMansion",    channelId: UCKgDsBDpYdZf2mbRzcEC8FA }
+  - { id: yt-wcandillon,        adapter: youtube, section: video, handle: "@wcandillon",         channelId: UC806fwFWpiLQV5y-qifzHnA }
+  - { id: yt-lowleveltv,        adapter: youtube, section: video, handle: "@LowLevelTV",         channelId: UC6biysICWOJ-C3P4Tyeggzg }
+  - { id: yt-melkeydev,         adapter: youtube, section: video, handle: "@MelkeyDev",          channelId: UC1Zfv1Zrp1q5lKgBomzOyCA }
+  - { id: yt-anthonygg,         adapter: youtube, section: video, handle: "@anthonygg_",         channelId: UCIjIAXXsX4YMYeFj-LP42-Q }
+  - { id: yt-fireship,          adapter: youtube, section: video, handle: "@Fireship",           channelId: UCsBjURrPoezykLs9EqgamOA }
+  - { id: yt-primeagen,         adapter: youtube, section: video, handle: "@ThePrimeTimeagen",   channelId: UCUyeluBRhGPCW4rPe_UvBZQ }
+  - { id: yt-t3dotgg,           adapter: youtube, section: video, handle: "@t3dotgg",            channelId: UCbRP3c757lWg9M-U7TyEkXA }
+  - { id: yt-hafifprogramming,  adapter: youtube, section: video, handle: "@hafifprogramming",   channelId: UCBsAE4_Cvr7FGnF6KVw9JfA }
+  - { id: yt-cicekileteknoloji, adapter: youtube, section: video, handle: "@cicekileteknoloji",  channelId: UCLGTx8RPgoB7DpsfQz8aBcA }
+
+telegram:
+  criticalPrefix: true
+
+llm:
+  model: claude-sonnet-5
+  scoreThreshold: 55
+
+caps:
+  reading: 8
+  video: 6
+
+# Deliberately dropped sources:
+#   expo/expo/releases.atom   Valid feed but always empty - the Expo monorepo cuts no
+#                             GitHub releases. npm tier1 `expo` plus the changelog
+#                             pagediff cover the same ground.
+#   reactnative.directory     Server HTML is only a __NEXT_DATA__ JSON blob whose download
+#                             counts change daily; no stable content selector exists.
+#   upgrade-helper            Fully client-rendered; the server returns 611 bytes of HTML.
+#   blog.expo.dev/feed        Medium mirror, newest post 2024-05; dead.

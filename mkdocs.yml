@@ -1,0 +1,31 @@
+site_name: Glory
+site_description: Daily technology digest for a React Native / mobile developer
+# Source of truth stays at archive/ in the repository root. The build step copies it
+# into a throwaway .build/docs/ tree so MkDocs' docs_dir requirement never dictates
+# the repository layout.
+docs_dir: .build/docs
+site_dir: .build/site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: { icon: material/weather-sunny, name: Light mode }
+
+plugins:
+  - search:            # the entire reason for choosing MkDocs Material
+      lang: [en]
+
+markdown_extensions:
+  - meta
+  - attr_list

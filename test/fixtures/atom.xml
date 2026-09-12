@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Release notes from react-native</title>
+  <entry>
+    <id>tag:github.com,2008:Repository/29028775/v0.82.0</id>
+    <updated>2026-09-10T11:00:00Z</updated>
+    <published>2026-09-10T10:00:00Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/facebook/react-native/releases/tag/v0.82.0"/>
+    <title>0.82.0</title>
+    <summary>&lt;p&gt;Breaking: the &lt;code&gt;Touchable&lt;/code&gt; root export is removed. R&amp;D notes.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/29028775/v0.83.0-rc.1</id>
+    <published>2026-09-11T10:00:00Z</published>
+    <link rel="alternate" href="https://github.com/facebook/react-native/releases/tag/v0.83.0-rc.1"/>
+    <title>0.83.0-rc.1</title>
+    <summary>Release candidate</summary>
+  </entry>
+</feed>

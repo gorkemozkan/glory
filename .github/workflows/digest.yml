@@ -1,0 +1,145 @@
+name: digest
+
+on:
+  schedule:
+    - cron: "7 5 * * *"    # 08:00 TR - primary
+    - cron: "7 8 * * *"    # 11:00 TR - guarded
+    - cron: "7 11 * * *"   # 14:00 TR - guarded
+    - cron: "7 14 * * *"   # 17:00 TR - guarded
+    - cron: "7 17 * * *"   # 20:00 TR - last chance
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Bypass the guard and skip all state writes"
+        type: boolean
+        default: false
+
+# A slow 11:00 run must queue the 14:00 slot rather than race it, or two jobs git push
+# simultaneously.
+concurrency:
+  group: digest
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+
+      # Actions has no native job retry.
+      - name: Generate digest
+        uses: nick-fields/retry@v3
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        with:
+          timeout_minutes: 15
+          max_attempts: 2
+          retry_wait_seconds: 300
+          command: npm run digest ${{ inputs.force && '-- --force' || '' }}
+
+      - name: Read pipeline output
+        id: out
+        run: |
+          test -f .build/out.json || echo '{}' > .build/out.json
+          {
+            echo "notify=$(jq -r '.notify // false' .build/out.json)"
+            echo "date=$(jq -r '.date // ""' .build/out.json)"
+            echo "telegram<<EOM"; jq -r '.telegram // ""' .build/out.json; echo "EOM"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Commit
+        run: |
+          git config user.name  "digest-bot"
+          git config user.email "digest-bot@users.noreply.github.com"
+          git add state archive
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "digest: ${{ steps.out.outputs.date }}"
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "push rejected, rebasing and retrying ($i/3)"
+            git pull --rebase
+          done
+          exit 1
+
+      - name: Build site
+        run: |
+          pip install --quiet mkdocs-material
+          mkdir -p .build/docs/archive
+          cp archive/*.md .build/docs/archive/
+          printf '# Glory\n\n[Go to the archive](archive/)\n' > .build/docs/index.md
+          mkdocs build --strict
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: .build/site }
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      # Deploying takes 60-90 seconds and a link sent earlier 404s.
+      - name: Telegram
+        if: steps.out.outputs.notify == 'true'
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BODY: ${{ steps.out.outputs.telegram }}
+          DATE: ${{ steps.out.outputs.date }}
+          DEPLOYED: ${{ steps.deploy.outcome }}
+        run: |
+          # If Pages is down, link the raw file: GitHub renders Markdown natively.
+          if [ "$DEPLOYED" != "success" ]; then
+            BODY="Here is your daily digest 👇
+          https://github.com/${{ github.repository }}/blob/main/archive/$DATE.md"
+          fi
+          for i in 1 2 3; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' -X POST \
+              "https://api.telegram.org/bot$TOKEN/sendMessage" \
+              --data-urlencode "chat_id=$CHAT_ID" --data-urlencode "text=$BODY")
+            [ "$code" = "200" ] && exit 0
+            echo "telegram HTTP $code ($i/3)"; sleep 10
+          done
+          # The content is already committed and published; there is no data loss.
+          echo "::warning::Telegram delivery failed"
+
+      - name: Source health alerts
+        if: always()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          jq -c '.alerts // [] | .[]' .build/out.json 2>/dev/null | while read -r a; do
+            title=$(jq -r .title <<<"$a"); body=$(jq -r .body <<<"$a"); key=$(jq -r .key <<<"$a")
+            num=$(gh issue list --label digest-health --state open --search "$key" --json number -q '.[0].number')
+            if [ -n "$num" ]; then gh issue comment "$num" --body "$body"
+            else gh issue create --label digest-health --title "$title" --body "$body"; fi
+          done
+
+      # The guard skips earlier slots in seconds, so a failure at the last slot means all
+      # five slots are down.
+      - name: Report total failure
+        if: failure()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          url="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          num=$(gh issue list --label digest-failure --state open --json number -q '.[0].number')
+          # The issue is the primary channel: if the failure is network-layer, Telegram
+          # cannot be reached either.
+          if [ -n "$num" ]; then gh issue comment "$num" --body "Failed again: $url"
+          else gh issue create --label digest-failure --title "Digest is not being produced" --body "First failure: $url"; fi
+          if [ "${{ github.event.schedule }}" = "7 17 * * *" ]; then
+            curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+              --data-urlencode "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+              --data-urlencode "text=⚠️ No digest could be produced today: $url" || true
+          fi
