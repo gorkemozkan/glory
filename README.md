@@ -68,49 +68,6 @@ One LLM call per run, `claude-sonnet-5` by default.
 
 ---
 
-## Repository layout
-
-```
-config/
-  sources.yml            all non-npm sources, plus llm/telegram/caps settings
-  deps.yml               npm tier lists + denylist
-  package.snapshot.json  copy of the app repo's package.json (names only are read)
-  profile.md             "who I am, what I care about" - fed to the LLM verbatim
-src/
-  main.ts                orchestration, CLI flags
-  guard.ts               "already produced today?" check
-  http.ts                timeout, retry, backoff, ETag, 429 handling
-  dedup.ts               URL normalization + seen-key hashing
-  curate.ts              the single LLM call + fallback
-  health.ts              failCount / lastItemAt rules, issue payloads
-  state.ts               JSON state read/write with sorted keys
-  adapters/              rss, youtube, npm, pagediff, discussions
-  render/                archive.ts, index.ts, telegram.ts
-state/                   committed; see below
-archive/                 committed; index.md + YYYY-MM-DD.md
-scripts/                 resolve-youtube-ids.ts, probe-selector.ts
-test/                    fixture-based adapter tests
-```
-
-`state/` and `archive/` are **committed to the repository**. The Actions cache is not durable
-and is not used for state.
-
-### State files
-
-| File | Holds | Notes |
-| --- | --- | --- |
-| `runs.json` | `lastRunAt`, `lastSuccessDate` | Drives the guard and the collection window |
-| `seen.json` | `key -> lastSeenISO` | 30-day TTL, pruned every run |
-| `versions.json` | `pkg -> version` or `{visibility:'private'}` | npm baselines |
-| `hashes.json` | `url -> {hash, at}` | pagediff baselines; `at` powers "last changed on X" |
-| `etags.json` | `url -> {etag, lastModified}` | Conditional requests; a 304 skips parsing |
-| `health.json` | `failCount`, `lastItemAt`, `disabledAt` | Source health and auto-disabling |
-
-All state is written with sorted keys and two-space indent so diffs stay readable in a
-GitHub commit view.
-
----
-
 ## Running locally
 
 ```bash
@@ -126,16 +83,6 @@ npm run typecheck
 `GITHUB_TOKEN` is needed for the `discussions` adapter (`GITHUB_TOKEN=$(gh auth token)`
 locally). `ANTHROPIC_API_KEY` is needed for curation — without it the run still completes
 via the uncurated fallback.
-
-### Helper scripts
-
-```bash
-# Resolve YouTube handles to channel IDs and verify each feed returns entries
-npx tsx scripts/resolve-youtube-ids.ts @ByteByteGo @hnasr
-
-# Validate a pagediff selector: fetches twice, hashes must match
-npx tsx scripts/probe-selector.ts https://expo.dev/changelog article main
-```
 
 ---
 
@@ -204,47 +151,6 @@ Timezone is `Europe/Istanbul`, fixed UTC+3, no DST since 2016 — cron expressio
 There are no overnight slots. If all five fail, tomorrow's 08:00 run picks up a ~48-hour
 window and delivers a double-size digest (headed `⚠️ 48 saatlik pencere`), which beats a
 02:00 "daily" notification.
-
----
-
-## Error handling
-
-Retries are the last resort, not the first. `ETag` / `Last-Modified` are stored per URL and
-replayed as `If-None-Match` / `If-Modified-Since`; a `304` skips parsing entirely.
-
-| Condition | Behaviour |
-| --- | --- |
-| Timeout, 5xx, DNS failure | 3 retries, exponential backoff with jitter (1s → 3s → 9s) |
-| `429` | Honour `Retry-After`, else 30s; 2 attempts |
-| `403`, `404` | No retry. Durable, `failCount++` |
-| npm `404` | Marked private, permanent skip, never surfaced as an error again |
-| >40% of **required** sources failed | Archive not written, job fails. A garbage digest is worse than no digest |
-| LLM failure | Publish uncurated |
-| `git push` non-fast-forward | `pull --rebase` then retry, ×3 |
-| Pages deploy failure | Telegram links the raw file on github.com instead — GitHub renders Markdown natively |
-| Telegram 5xx | 3 retries, then log only. Content is already committed; no data loss |
-| All five slots failed | Open or update a `digest-failure` issue, **then** a best-effort Telegram one-liner |
-
-The issue is the primary failure channel: if the failure is network-layer, Telegram cannot be
-reached either.
-
-### Source health
-
-`state/health.json` tracks `failCount` and `lastItemAt` per source, because retries cannot
-fix a source that is structurally broken:
-
-| Threshold | Action |
-| --- | --- |
-| 3 consecutive failed days | Open or update a `digest-health` issue |
-| 14 consecutive failed days | Auto-disable the source **in state, never in config** |
-| 45 days with zero items | Silent-death suspicion — open an issue |
-
-The last rule catches the nastiest failure mode: a source returning `200` with valid XML that
-has been empty for weeks. A renamed YouTube channel ID behaves exactly like this and no
-amount of retrying detects it. Disabling lives in state rather than config on purpose — the
-config file belongs to the owner and the script must not silently rewrite it.
-
-To re-enable a disabled source, delete its `disabledAt` field in `state/health.json`.
 
 ---
 
@@ -360,10 +266,17 @@ The repository is public and nothing secret is committed.
 - { id: my-page, adapter: pagediff, section: platform, url: https://…, selector: "main", title: "My Page" }
 ```
 
-For `pagediff`, run `scripts/probe-selector.ts` and confirm the selector is reported
-`STABLE`. If it isn't, the selector is still capturing nonces, ad slots or build hashes and
-every run would report a diff. Prefer a slightly noisy selector over a brittle narrow one —
-for policy pages a false negative is far more costly than a false positive.
+For `pagediff`, validate the selector first — it fetches the page twice and the two hashes
+must match:
+
+```bash
+npx tsx scripts/probe-selector.ts https://expo.dev/changelog article main
+```
+
+Confirm the selector you pick is reported `STABLE`. If it isn't, it is still capturing
+nonces, ad slots or build hashes and every run would report a diff. Prefer a slightly noisy
+selector over a brittle narrow one — for policy pages a false negative is far more costly
+than a false positive.
 
 New `pagediff` and `npm` entries emit nothing on their first run; they only record a
 baseline.
