@@ -1,11 +1,11 @@
 {
   "android-dev-blog": {
     "failCount": 0,
-    "lastItemAt": "2026-09-13T08:33:42.110Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "apple-dev-news": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "appstore-review-guidelines": {
     "failCount": 0,
@@ -21,15 +21,15 @@
   },
   "hermes-releases": {
     "failCount": 0,
-    "lastItemAt": "2026-09-12T18:32:07.797Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "hn-frontpage": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "medium-react-native": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "nitro-releases": {
     "failCount": 0,
@@ -37,19 +37,19 @@
   },
   "npm-deps": {
     "failCount": 0,
-    "lastItemAt": "2026-09-12T18:32:07.797Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "react-blog": {
     "failCount": 0,
-    "lastItemAt": "2026-09-12T18:32:07.797Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "react-navigation-releases": {
     "failCount": 0,
-    "lastItemAt": "2026-09-12T18:32:07.797Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "reactwg-releases": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "reanimated-releases": {
     "failCount": 0,
@@ -57,7 +57,7 @@
   },
   "reddit-reactnative": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "rn-blog": {
     "failCount": 0,
@@ -69,7 +69,7 @@
   },
   "screens-releases": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "ts-devblog": {
     "failCount": 0,
@@ -81,66 +81,66 @@
   },
   "yt-anthonygg": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-bytebytego": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-callstack": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-cicekileteknoloji": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-codeaesthetic": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-expo": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-fireship": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-galaxies": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-hafifprogramming": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-hnasr": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-lowleveltv": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-melkeydev": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-primeagen": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-software-mansion": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-t3dotgg": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   },
   "yt-wcandillon": {
     "failCount": 0,
-    "lastItemAt": "2026-09-14T10:33:03.680Z"
+    "lastItemAt": "2026-09-15T10:00:31.069Z"
   }
 }
