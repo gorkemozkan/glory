@@ -1,11 +1,11 @@
 {
   "https://android-developers.googleblog.com/feeds/posts/default": {
-    "etag": "W/\"780db59d75150647fe62bc8560bf29ab143df521368e37c697759ca2bef66366\"",
-    "lastModified": "Thu, 17 Sep 2026 01:14:54 GMT"
+    "etag": "W/\"f97ff019a6f73dc4583127541f2ac7257744fb81ab1641d3723d250d1352edd2\"",
+    "lastModified": "Thu, 17 Sep 2026 20:11:20 GMT"
   },
   "https://devblogs.microsoft.com/typescript/feed/": {
-    "etag": "W/\"f8527094f3048dbb830c876c848240f8\"",
-    "lastModified": "Tue, 15 Sep 2026 17:40:15 GMT"
+    "etag": "W/\"caf650f8437d7b139f89488880204245\"",
+    "lastModified": "Thu, 17 Sep 2026 16:08:10 GMT"
   },
   "https://github.com/facebook/hermes/releases.atom": {
     "etag": "W/\"69b8f0179f90598a70176eb90e6d92cb\""
@@ -20,16 +20,16 @@
     "etag": "W/\"a0f43c42aded5630239a90b6e48f6046\""
   },
   "https://github.com/react-navigation/react-navigation/releases.atom": {
-    "etag": "W/\"c699888fbdef6b7d7517709eb0935e95\""
+    "etag": "W/\"79c547357ab7ab9df238b830d83ccda3\""
   },
   "https://github.com/software-mansion/react-native-reanimated/releases.atom": {
     "etag": "W/\"7768092745040d7e80cab3ad6cc2143b\""
   },
   "https://github.com/software-mansion/react-native-screens/releases.atom": {
-    "etag": "W/\"e9c4faf13ca168d62b057b9a68625a5d\""
+    "etag": "W/\"fa6d8cd214e7b23c4870207a86f48718\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Thu, 17 Sep 2026 03:03:23 GMT"
+    "lastModified": "Fri, 18 Sep 2026 02:47:24 GMT"
   },
   "https://react.dev/rss.xml": {
     "etag": "W/\"026f58d8774ed2db2c7921f10cc43818\"",
