@@ -1,7 +1,7 @@
 {
   "https://android-developers.googleblog.com/feeds/posts/default": {
-    "etag": "W/\"0f1e84d31294cacba81a38e7fd3282ad9c957d20fdf91c610d353acd3ad19f76\"",
-    "lastModified": "Tue, 22 Sep 2026 17:41:19 GMT"
+    "etag": "W/\"6d0d8db1f8b81a41f1512de4c08f50b861273cac4bf56c2b5f1387c55b139d80\"",
+    "lastModified": "Wed, 23 Sep 2026 21:47:08 GMT"
   },
   "https://devblogs.microsoft.com/typescript/feed/": {
     "etag": "W/\"52553ffc34e6905172d136f99567170c\"",
@@ -29,7 +29,7 @@
     "etag": "W/\"75523b24fb47ae79588fbb6cb42b9e24\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Tue, 22 Sep 2026 21:00:30 GMT"
+    "lastModified": "Wed, 23 Sep 2026 23:47:56 GMT"
   },
   "https://react.dev/rss.xml": {
     "etag": "W/\"5c0a0d137b38e708fb7f70f8338900c1\"",
