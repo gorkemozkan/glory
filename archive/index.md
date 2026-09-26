@@ -1,7 +1,8 @@
 # Archive
 
-14 days total.
+15 days total.
 
+- [September 26, 2026](2026-09-26.md) — 16 items
 - [September 25, 2026](2026-09-25.md) — 16 items
 - [September 24, 2026](2026-09-24.md) — 15 items
 - [September 23, 2026](2026-09-23.md) — 16 items
