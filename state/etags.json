@@ -1,7 +1,7 @@
 {
   "https://android-developers.googleblog.com/feeds/posts/default": {
-    "etag": "W/\"2be38879699555967f2716759d8b10724c71938002ffb229400ce8a69d509da2\"",
-    "lastModified": "Thu, 24 Sep 2026 18:04:49 GMT"
+    "etag": "W/\"613546e8dd6dea49a77cca7a202d9594a764794bef94216cdf640c36419ec562\"",
+    "lastModified": "Mon, 28 Sep 2026 19:58:57 GMT"
   },
   "https://devblogs.microsoft.com/typescript/feed/": {
     "etag": "W/\"52553ffc34e6905172d136f99567170c\"",
@@ -11,7 +11,7 @@
     "etag": "W/\"d819e273c1e39646c1c3576f1b3e69f9\""
   },
   "https://github.com/facebook/react-native/releases.atom": {
-    "etag": "W/\"58e6c7bc5e57778989da312678a68ce7\""
+    "etag": "W/\"e6e82f06740123b9d1dc92087b03fbb2\""
   },
   "https://github.com/microsoft/TypeScript/releases.atom": {
     "etag": "W/\"50628990f0586680d4dd2714c2bbb838\""
@@ -29,7 +29,7 @@
     "etag": "W/\"3a14732e2153007284f0e3abc959f84b\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Mon, 28 Sep 2026 02:05:13 GMT"
+    "lastModified": "Mon, 28 Sep 2026 18:04:47 GMT"
   },
   "https://react.dev/rss.xml": {
     "etag": "W/\"5c0a0d137b38e708fb7f70f8338900c1\"",
