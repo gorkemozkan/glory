@@ -1,11 +1,11 @@
 {
   "https://android-developers.googleblog.com/feeds/posts/default": {
-    "etag": "W/\"ed7faf5b926f5f15eec5a5a3f0f0c7a5895024825d3d39b39f5ec6eeae9a5161\"",
-    "lastModified": "Tue, 29 Sep 2026 19:11:54 GMT"
+    "etag": "W/\"7541bfb0b54dc28a8b5a3f8f46b6fa1964de53d741b420bed2da63ae74e21bbb\"",
+    "lastModified": "Wed, 30 Sep 2026 19:01:08 GMT"
   },
   "https://devblogs.microsoft.com/typescript/feed/": {
-    "etag": "W/\"52553ffc34e6905172d136f99567170c\"",
-    "lastModified": "Tue, 22 Sep 2026 17:32:52 GMT"
+    "etag": "W/\"38d13916bc3bef6626fd23f6a0ab14b6\"",
+    "lastModified": "Wed, 30 Sep 2026 07:07:32 GMT"
   },
   "https://github.com/facebook/hermes/releases.atom": {
     "etag": "W/\"d819e273c1e39646c1c3576f1b3e69f9\""
@@ -14,7 +14,7 @@
     "etag": "W/\"e6e82f06740123b9d1dc92087b03fbb2\""
   },
   "https://github.com/microsoft/TypeScript/releases.atom": {
-    "etag": "W/\"c29d2997ce50e2bad6d8cd6296e02ef9\""
+    "etag": "W/\"00fb6d7c7ac78ac83aedfdfe0fc2ff21\""
   },
   "https://github.com/mrousavy/nitro/releases.atom": {
     "etag": "W/\"a0f43c42aded5630239a90b6e48f6046\""
@@ -29,7 +29,7 @@
     "etag": "W/\"c2afed1c484fdbe0265808f0ed0905b8\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Tue, 29 Sep 2026 17:13:38 GMT"
+    "lastModified": "Wed, 30 Sep 2026 20:04:37 GMT"
   },
   "https://react.dev/rss.xml": {
     "etag": "W/\"0a9199378f3a41b2ac99def008624456\"",
