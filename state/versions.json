@@ -13,7 +13,7 @@
   "@react-native-firebase/storage": "26.4.0",
   "@react-native-google-signin/google-signin": "16.1.5",
   "@reduxjs/toolkit": "2.13.0",
-  "@sentry/react-native": "8.29.0",
+  "@sentry/react-native": "8.30.0",
   "@shopify/flash-list": "2.3.3",
   "expo": "57.0.27",
   "expo-build-properties": "57.0.22",
