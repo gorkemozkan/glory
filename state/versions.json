@@ -22,11 +22,11 @@
   "expo-notifications": "57.0.22",
   "expo-router": "57.0.25",
   "expo-video": "57.0.5",
-  "i18next": "26.4.3",
+  "i18next": "26.4.4",
   "lottie-react-native": "7.5.0",
   "react": "19.3.0",
   "react-dom": "19.3.0",
-  "react-hook-form": "7.89.0",
+  "react-hook-form": "7.90.0",
   "react-i18next": "17.0.16",
   "react-native": "0.87.1",
   "react-native-adapty": "4.2.3",
@@ -45,5 +45,5 @@
   "react-native-worklets-core": "1.6.3",
   "react-redux": "9.3.0",
   "typescript": "7.0.2",
-  "zod": "4.6.5"
+  "zod": "4.6.6"
 }
