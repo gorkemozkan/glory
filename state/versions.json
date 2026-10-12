@@ -15,12 +15,12 @@
   "@reduxjs/toolkit": "2.13.0",
   "@sentry/react-native": "8.30.0",
   "@shopify/flash-list": "2.3.3",
-  "expo": "57.0.27",
+  "expo": "57.0.28",
   "expo-build-properties": "57.0.22",
-  "expo-dev-client": "57.0.19",
+  "expo-dev-client": "57.0.20",
   "expo-image": "57.0.5",
   "expo-notifications": "57.0.22",
-  "expo-router": "57.0.25",
+  "expo-router": "57.0.26",
   "expo-video": "57.0.5",
   "i18next": "26.4.4",
   "lottie-react-native": "7.5.0",
@@ -45,5 +45,5 @@
   "react-native-worklets-core": "1.6.3",
   "react-redux": "9.3.0",
   "typescript": "7.0.2",
-  "zod": "4.6.6"
+  "zod": "4.6.7"
 }
