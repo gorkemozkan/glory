@@ -1,7 +1,6 @@
 {
   "https://android-developers.googleblog.com/feeds/posts/default": {
-    "etag": "W/\"50679f193d96e126fe2aebe904ac4019a1565ec450069d234192749d1c4fb1b9\"",
-    "lastModified": "Fri, 16 Oct 2026 02:28:23 GMT"
+    "lastModified": "Fri, 16 Oct 2026 17:05:51 GMT"
   },
   "https://devblogs.microsoft.com/typescript/feed/": {
     "etag": "W/\"dcee9708ea657510c4a2411f3ea274fe\"",
@@ -26,16 +25,16 @@
     "etag": "W/\"f570fc5e50a1f7e1f907570b827769c4\""
   },
   "https://github.com/software-mansion/react-native-screens/releases.atom": {
-    "etag": "W/\"3792cc066923023691f5fb7e3f66e49a\""
+    "etag": "W/\"f50d18071b119a6e041b2228b752038d\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Fri, 16 Oct 2026 00:52:35 GMT"
+    "lastModified": "Sat, 17 Oct 2026 02:21:08 GMT"
   },
   "https://react.dev/rss.xml": {
     "etag": "W/\"5844cd99d04e967002535ee0c2719b54\"",
     "lastModified": "Tue, 06 Oct 2026 11:36:53 GMT"
   },
   "https://reactnative.dev/blog/rss.xml": {
-    "etag": "\"cd7cca2b6f069d1a7a4211c4791a181f-ssl-df\""
+    "etag": "\"13ae3bac90cde12f5b37cfc009d638f6-ssl-df\""
   }
 }

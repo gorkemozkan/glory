@@ -1,7 +1,8 @@
 # Archive
 
-35 days total.
+36 days total.
 
+- [October 17, 2026](2026-10-17.md) — 19 items
 - [October 16, 2026](2026-10-16.md) — 19 items
 - [October 15, 2026](2026-10-15.md) — 17 items
 - [October 14, 2026](2026-10-14.md) — 24 items
