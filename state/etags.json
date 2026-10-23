@@ -3,8 +3,8 @@
     "lastModified": "Wed, 21 Oct 2026 19:02:24 GMT"
   },
   "https://devblogs.microsoft.com/typescript/feed/": {
-    "etag": "W/\"0e1dd00d5bc8f2231a799b12b43448dd\"",
-    "lastModified": "Thu, 22 Oct 2026 05:46:29 GMT"
+    "etag": "W/\"e30611759a5aa7feb4231a41d697ea87\"",
+    "lastModified": "Thu, 22 Oct 2026 21:05:27 GMT"
   },
   "https://github.com/facebook/hermes/releases.atom": {
     "etag": "W/\"d819e273c1e39646c1c3576f1b3e69f9\""
@@ -16,7 +16,7 @@
     "etag": "W/\"c4f6cded3225ac88e63efbd317c2058d\""
   },
   "https://github.com/mrousavy/nitro/releases.atom": {
-    "etag": "W/\"d056c58b9b0d9e0d9b8a6de02d05c61f\""
+    "etag": "W/\"a6bfb82fe1ef1729f30b3e766244739a\""
   },
   "https://github.com/react-navigation/react-navigation/releases.atom": {
     "etag": "W/\"393b6a3e3f2b11b608064f81783d9141\""
@@ -25,10 +25,10 @@
     "etag": "W/\"f570fc5e50a1f7e1f907570b827769c4\""
   },
   "https://github.com/software-mansion/react-native-screens/releases.atom": {
-    "etag": "W/\"1fb6148c4432259f3fa61954b4a1ab11\""
+    "etag": "W/\"d512e9ac6d0943fb49b55534a30b42af\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Thu, 22 Oct 2026 02:30:52 GMT"
+    "lastModified": "Fri, 23 Oct 2026 00:52:01 GMT"
   },
   "https://react.dev/rss.xml": {
     "etag": "W/\"c46a640d57806a2517444828ec014e4f\"",
