@@ -1,11 +1,11 @@
 {
   "android-dev-blog": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "apple-dev-news": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "appstore-review-guidelines": {
     "failCount": 0,
@@ -20,55 +20,55 @@
     "lastItemAt": "2026-10-29T21:44:49.743Z"
   },
   "hermes-releases": {
-    "failCount": 0,
+    "failCount": 1,
     "lastItemAt": "2026-11-02T22:42:21.585Z"
   },
   "hn-frontpage": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "medium-react-native": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "nitro-releases": {
-    "failCount": 0,
+    "failCount": 1,
     "lastItemAt": "2026-11-03T22:16:01.535Z"
   },
   "npm-deps": {
     "failCount": 0,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "react-blog": {
     "failCount": 0,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "react-navigation-releases": {
-    "failCount": 0,
+    "failCount": 1,
     "lastItemAt": "2026-10-14T10:05:15.664Z"
   },
   "reactwg-releases": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "reanimated-releases": {
-    "failCount": 0,
+    "failCount": 1,
     "lastItemAt": "2026-10-28T21:37:59.136Z"
   },
   "reddit-reactnative": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "rn-blog": {
     "failCount": 0,
     "lastItemAt": "2026-11-04T22:34:18.980Z"
   },
   "rn-releases": {
-    "failCount": 0,
+    "failCount": 1,
     "lastItemAt": "2026-11-05T21:00:33.936Z"
   },
   "screens-releases": {
-    "failCount": 0,
+    "failCount": 1,
     "lastItemAt": "2026-11-06T22:02:03.530Z"
   },
   "ts-devblog": {
@@ -76,71 +76,71 @@
     "lastItemAt": "2026-11-04T22:34:18.980Z"
   },
   "typescript-releases": {
-    "failCount": 0,
+    "failCount": 1,
     "lastItemAt": "2026-11-06T22:02:03.530Z"
   },
   "yt-anthonygg": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-bytebytego": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-callstack": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-cicekileteknoloji": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-codeaesthetic": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-expo": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-fireship": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-galaxies": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-hafifprogramming": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-hnasr": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-lowleveltv": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-melkeydev": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-primeagen": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-software-mansion": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-t3dotgg": {
     "failCount": 0,
-    "lastItemAt": "2026-11-06T22:02:03.530Z"
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   },
   "yt-wcandillon": {
-    "failCount": 1,
-    "lastItemAt": "2026-11-05T21:00:33.936Z"
+    "failCount": 0,
+    "lastItemAt": "2026-11-08T11:53:00.516Z"
   }
 }
