@@ -16,7 +16,7 @@
     "etag": "W/\"2198f03e4dce23edb430912091418ee6\""
   },
   "https://github.com/mrousavy/nitro/releases.atom": {
-    "etag": "W/\"8f546153ab352a586dfad1b804a10c78\""
+    "etag": "W/\"e2da1c6cdbbb3eb1baeb38679c776834\""
   },
   "https://github.com/react-navigation/react-navigation/releases.atom": {
     "etag": "W/\"393b6a3e3f2b11b608064f81783d9141\""
@@ -28,11 +28,11 @@
     "etag": "W/\"f733f5c1a8b9bcf3a0ee4366761eb809\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Sun, 08 Nov 2026 18:16:07 GMT"
+    "lastModified": "Mon, 09 Nov 2026 18:56:29 GMT"
   },
   "https://react.dev/rss.xml": {
-    "etag": "W/\"f59a50f133caf299b8f8345fbc245113\"",
-    "lastModified": "Sun, 08 Nov 2026 12:00:45 GMT"
+    "etag": "W/\"975197adfecc8a364397c5fda837cb19\"",
+    "lastModified": "Mon, 09 Nov 2026 14:41:49 GMT"
   },
   "https://reactnative.dev/blog/rss.xml": {
     "etag": "W/\"d6432566fe2520b81a4d3343b24667bd-ssl\""
