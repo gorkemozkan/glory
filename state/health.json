@@ -1,11 +1,11 @@
 {
   "android-dev-blog": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "apple-dev-news": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "appstore-review-guidelines": {
     "failCount": 0,
@@ -25,11 +25,11 @@
   },
   "hn-frontpage": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "medium-react-native": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "nitro-releases": {
     "failCount": 0,
@@ -37,7 +37,7 @@
   },
   "npm-deps": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "react-blog": {
     "failCount": 0,
@@ -49,14 +49,15 @@
   },
   "reactwg-releases": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "reanimated-releases": {
     "failCount": 0,
-    "lastItemAt": "2026-11-17T22:10:26.165Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "reddit-reactnative": {
-    "failCount": 2,
+    "failCount": 3,
+    "issueOpenedFor": "fail",
     "lastItemAt": "2026-11-16T23:18:38.869Z"
   },
   "rn-blog": {
@@ -73,7 +74,7 @@
   },
   "ts-devblog": {
     "failCount": 0,
-    "lastItemAt": "2026-11-17T22:10:26.165Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "typescript-releases": {
     "failCount": 0,
@@ -81,66 +82,66 @@
   },
   "yt-anthonygg": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-bytebytego": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-callstack": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-cicekileteknoloji": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-codeaesthetic": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-expo": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-fireship": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-galaxies": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-hafifprogramming": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-hnasr": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-lowleveltv": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-melkeydev": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-primeagen": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-software-mansion": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-t3dotgg": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   },
   "yt-wcandillon": {
     "failCount": 0,
-    "lastItemAt": "2026-11-18T21:48:41.824Z"
+    "lastItemAt": "2026-11-19T22:05:20.976Z"
   }
 }
