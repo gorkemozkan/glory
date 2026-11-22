@@ -1,7 +1,8 @@
 # Archive
 
-72 days total.
+73 days total.
 
+- [November 23, 2026](2026-11-23.md) — 15 items
 - [November 22, 2026](2026-11-22.md) — 16 items
 - [November 21, 2026](2026-11-21.md) — 16 items
 - [November 20, 2026](2026-11-20.md) — 18 items
