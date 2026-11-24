@@ -3,14 +3,14 @@
     "lastModified": "Mon, 23 Nov 2026 18:44:22 GMT"
   },
   "https://devblogs.microsoft.com/typescript/feed/": {
-    "etag": "W/\"728cb762cabd450b660815ead318a231\"",
-    "lastModified": "Mon, 23 Nov 2026 20:41:04 GMT"
+    "etag": "W/\"0f0e38c01124390f0bfa593aeabfc089\"",
+    "lastModified": "Tue, 24 Nov 2026 19:22:08 GMT"
   },
   "https://github.com/facebook/hermes/releases.atom": {
     "etag": "W/\"9680b500df6d4a11640f26ef66f5ce26\""
   },
   "https://github.com/facebook/react-native/releases.atom": {
-    "etag": "W/\"f5e486ac8c01d27a8817605a900de6a2\""
+    "etag": "W/\"6f94a5972fb966dba2a21914604be66b\""
   },
   "https://github.com/microsoft/TypeScript/releases.atom": {
     "etag": "W/\"2198f03e4dce23edb430912091418ee6\""
@@ -25,14 +25,14 @@
     "etag": "W/\"398f345886633299df781c52648164c3\""
   },
   "https://github.com/software-mansion/react-native-screens/releases.atom": {
-    "etag": "W/\"3b254f29b4fa7b561627abafd4f831ee\""
+    "etag": "W/\"15e62a1fa0eed0f7f4ccb45bd0857359\""
   },
   "https://hnrss.org/frontpage?points=150": {
-    "lastModified": "Mon, 23 Nov 2026 19:17:55 GMT"
+    "lastModified": "Tue, 24 Nov 2026 16:45:44 GMT"
   },
   "https://react.dev/rss.xml": {
-    "etag": "W/\"dba8beb3427ad09ec5437f71261d68f8\"",
-    "lastModified": "Wed, 11 Nov 2026 16:46:32 GMT"
+    "etag": "W/\"a84e4ed00d10015c4ccefb66337f802c\"",
+    "lastModified": "Tue, 24 Nov 2026 16:43:20 GMT"
   },
   "https://reactnative.dev/blog/rss.xml": {
     "etag": "W/\"d6432566fe2520b81a4d3343b24667bd-ssl\""
